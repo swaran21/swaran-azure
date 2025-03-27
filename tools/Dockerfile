@@ -1,9 +1,8 @@
 # syntax=docker/dockerfile:1
-
-# run
 FROM mcr.microsoft.com/openjdk/jdk:17-distroless
 
 # Prepare the Application Insights Java agent
+# This is optional for Lab 2. It's prepared for the Application Insights monitoring in Lab 3.
 ARG AI_VERSION=3.6.2
 ADD https://github.com/microsoft/ApplicationInsights-Java/releases/download/$AI_VERSION/applicationinsights-agent-$AI_VERSION.jar /applicationinsights-agent.jar
 
